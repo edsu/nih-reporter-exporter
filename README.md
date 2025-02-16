@@ -22,4 +22,7 @@ FY 2018 RePORTER Project Abstracts --> data/RePORTER_PRJABS_C_FY2018.zip
 
 When it's done you should find the downloaded data in the `data` directory that was created.
 
+In an ideal world we wouldn't need to use [Playwright] and a headless browser to do the data collection. But the downloads are triggered by click events using JavaScript, and involve an API call, so it was more feasible to automate an actual browser.
+
 [NIH Reporter Exporter]: https://reporter.nih.gov/exporter
+[Playwright]: https://playwright.dev/

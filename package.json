@@ -1,0 +1,17 @@
+{
+  "name": "nih-reporter-exporter",
+  "version": "0.0.1",
+  "type": "module",
+  "description": "Download reporter.nih.gov/exporter data",
+  "main": "download.js",
+  "repository": "https://github.com/edsu/nih-reporter-exporter/",
+  "author": "Ed Summers <ehs@pobox.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@playwright/browser-chromium": "^1.50.1",
+    "playwright": "^1.50.1"
+  },
+  "scripts": {
+    "download": "node download.js"
+  }
+}

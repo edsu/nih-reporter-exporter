@@ -3,7 +3,15 @@ import { chromium, devices } from 'playwright';
 
 async function main() {
   const browser = await chromium.launch({ headless: true });
-  const context = await browser.newContext(devices['Desktop Chrome']);
+
+  // record HTTP headers to data/headers.har
+  const context = await browser.newContext({ 
+    ...devices['Desktop Chrome'],
+    recordHar: {
+      content: "omit",
+      path: "data/headers.har"
+    }
+  })
   const page = await context.newPage();
 
   await page.goto('https://reporter.nih.gov/exporter/');
@@ -14,6 +22,7 @@ async function main() {
   await download(page, 'Link Tables');
   await download(page, 'Projects');
 
+  await context.close();
   await browser.close();
 }
 

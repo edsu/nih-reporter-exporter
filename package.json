@@ -12,6 +12,7 @@
     "playwright": "^1.50.1"
   },
   "scripts": {
-    "download": "node download.js"
+    "download": "node download.js",
+    "package": "./package.sh"
   }
 }

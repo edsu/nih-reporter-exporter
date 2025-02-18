@@ -18,7 +18,13 @@ FY 2020 RePORTER Project Abstracts --> data/RePORTER_PRJABS_C_FY2020.zip
 FY 2019 RePORTER Project Abstracts --> data/RePORTER_PRJABS_C_FY2019.zip
 FY 2018 RePORTER Project Abstracts --> data/RePORTER_PRJABS_C_FY2018.zip
 ...
+
+and then:
+
+$ yarn run package
 ```
+
+
 
 When it's done you should find the downloaded data in the `data` directory that was created.
 

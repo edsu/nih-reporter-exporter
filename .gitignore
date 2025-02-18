@@ -1,2 +1,4 @@
+bag
 data
 node_modules
+*.pem

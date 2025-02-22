@@ -1,4 +1,5 @@
 bag
-data
+nih-reporter-exporter
 node_modules
 *.pem
+*.zip

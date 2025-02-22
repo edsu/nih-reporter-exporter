@@ -4,12 +4,12 @@ import { chromium, devices } from 'playwright';
 async function main() {
   const browser = await chromium.launch({ headless: true });
 
-  // record HTTP headers to data/headers.har
+  // record HTTP headers to headers.har
   const context = await browser.newContext({ 
     ...devices['Desktop Chrome'],
     recordHar: {
       content: "omit",
-      path: "data/headers.har"
+      path: "nih-reporter-exporter/headers.har"
     }
   })
   const page = await context.newPage();
@@ -48,7 +48,7 @@ async function download(page, linkText) {
     const download = await downloadPromise;
 
     // persist the download
-    const filename = `data/${download.suggestedFilename()}`;
+    const filename = `nih-reporter-exporter/${download.suggestedFilename()}`;
     await download.saveAs(filename);
     console.log(filename);
   }

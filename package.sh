@@ -33,6 +33,7 @@ bagit.py \
     nih-reporter-exporter;
 
 # use nabit to generate the digital signatures
-nabit sign nih-reporter-exporter \
+nabit archive nih-reporter-exporter \
+    --amend \
     --sign $SSL_CERT_FILE:$SSL_KEY_FILE \
     --timestamp digicert
